@@ -6,17 +6,22 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'box-sizing';
 @import 'resets';
 
-$c-blue: #4170cb;
+$c-primary: #3473b5;
 $c-jamaica1: #54b0d2;
 $c-jamaica2: #17b63e;
 $c-jamaica3: #4a048e;
+$c-pink: #e577aa;
+$c-blue: #72bbe9;
+$c-green: #7abe93;
+$c-yellow: #e5b178;
 
 .section {
   padding: 2rem;
 }
 
 .container {
-  max-width: 65rem;
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 .grid {
@@ -28,19 +33,17 @@ $c-jamaica3: #4a048e;
   flex-basis: calc(100% / 3 - 2rem);
   flex-grow: 1;
   margin: 1rem;
-  border: 0.25rem $c-blue solid;
+  border: 0.25rem $c-primary solid;
 }
 
 .shop-card {
-  display: flex;
-  flex-direction: column;
-
   &__title {
-    color: $c-blue;
+    color: $c-primary;
   }
 
   &__description {
-    color: $c-blue;
+    color: $c-primary;
+    padding: 0 1rem;
   }
 
   &__pic {
@@ -63,14 +66,14 @@ $c-jamaica3: #4a048e;
 .button-bar {
   display: flex;
   min-height: 2rem;
-  border-top: 0.25rem $c-blue solid;
+  border-top: 0.25rem $c-primary solid;
 
 
   &__button {
     flex-grow: 1;
     border: 0;
     background: none;
-    color: $c-blue;
+    color: $c-primary;
 
     &:hover {
       background-color: $c-jamaica1;
@@ -78,10 +81,9 @@ $c-jamaica3: #4a048e;
   }
 
   > * + * {
-    border-left: 0.25rem solid $c-blue;
+    border-left: 0.25rem solid $c-primary;
   }
 }
-
 
 
 
