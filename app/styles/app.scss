@@ -52,29 +52,38 @@ $c-jamaica3: #4a048e;
   }
 
   &__options {
-    border-top: 0.25rem $c-blue solid;
+
 
   }
 
 }
+
+
 
 .button-bar {
   display: flex;
   min-height: 2rem;
+  border-top: 0.25rem $c-blue solid;
+
+
+  &__button {
+    flex-grow: 1;
+    border: 0;
+    background: none;
+    color: $c-blue;
+
+    &:hover {
+      background-color: $c-jamaica1;
+    }
+  }
 
   > * + * {
-    border-left: 0.25rem $c-blue solid;
-  }
-
-  .button-bar__button {
-    flex-grow: 1;
-    transition: background-color 0.5s ease;
-  }
-
-  &:hover {
-    background-color: $c-jamaica1;
+    border-left: 0.25rem solid $c-blue;
   }
 }
+
+
+
 
 .dropdown__list {
   display: none;
