@@ -1,6 +1,7 @@
 @media(min-width: 500px) and (max-width: 770px) {
   .grid {
     flex-direction: column;
+
   }
 
   .shop-card {
@@ -13,17 +14,26 @@
   }
 
   .button-bar {
-    display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    min-width: 2rem;
-    border: none;
-    background: $c-jamaica1;
+    height: 100%;
+    border: 0;
+    border-left: 0.25rem solid $c-primary;
+
+    > * + * {
+      border-left: 0;
+    }
   }
 
-  .dropdown__list {
-    right: 100%;
-    border: none;
-  }
+  .dropdown {
+    .dropdown__list {
+      right: 100%;
+      flex-direction: row-reverse;
+      padding: 0;
+      border: 0;
+    }
 
+    > * + * {
+      border: 0;
+    }
+  }
 }
