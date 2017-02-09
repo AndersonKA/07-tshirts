@@ -1,12 +1,12 @@
 // @import 'yoga';
 // @import 'normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+@import 'font-awesome';
 @import 'box-sizing';
 @import 'resets';
 
-$c-border: #4170cb;
+$c-blue: #4170cb;
 $c-jamaica1: #54b0d2;
 $c-jamaica2: #17b63e;
 $c-jamaica3: #4a048e;
@@ -21,33 +21,50 @@ $c-jamaica3: #4a048e;
 
 .grid {
   display: flex;
-  flex-basis: calc(100% / 3 - 2rem);
-  flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .grid__item {
-  flex-wrap: wrap;
+  flex-basis: calc(100% / 3 - 2rem);
+  flex-grow: 1;
   margin: 1rem;
-  border: 0.25rem $c-border solid;
+  border: 0.25rem $c-blue solid;
 }
 
 .shop-card {
+  display: flex;
+  flex-direction: column;
 
   &__title {
-    background: $c-jamaica1;
+    color: $c-blue;
   }
 
   &__description {
-    background: $c-jamaica2;
+    color: $c-blue;
+  }
+
+  &__pic {
+    padding: 1rem;
+  }
+
+  &__info {
+    text-align: center;
   }
 
   &__options {
-    background: $c-jamaica3;
+  border-top: 0.25rem $c-blue solid;
+
   }
 
 }
 
+.button-bar__button {
+  transition: background-color 0.5s ease;
 
+  &:hover {
+    background-color: $c-jamaica1;
+  }
+}
 
 .dropdown__list {
   display: none;
