@@ -4,3 +4,51 @@
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
+@import 'resets';
+
+$c-border: #4170cb;
+$c-jamaica1: #54b0d2;
+$c-jamaica2: #17b63e;
+$c-jamaica3: #4a048e;
+
+.section {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 65rem;
+}
+
+.grid {
+  display: flex;
+  flex-basis: calc(100% / 3 - 2rem);
+  flex-grow: 1;
+}
+
+.grid__item {
+  flex-wrap: wrap;
+  margin: 1rem;
+  border: 0.25rem $c-border solid;
+}
+
+.shop-card {
+
+  &__title {
+    background: $c-jamaica1;
+  }
+
+  &__description {
+    background: $c-jamaica2;
+  }
+
+  &__options {
+    background: $c-jamaica3;
+  }
+
+}
+
+
+
+.dropdown__list {
+  display: none;
+}
