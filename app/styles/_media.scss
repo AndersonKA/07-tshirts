@@ -1,0 +1,29 @@
+@media(min-width: 500px) and (max-width: 770px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .shop-card {
+    display: flex;
+    flex-direction: row;
+
+    &__pic {
+      width: 25%;
+    }
+  }
+
+  .button-bar {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 2rem;
+    border: none;
+    background: $c-jamaica1;
+  }
+
+  .dropdown__list {
+    right: 100%;
+    border: none;
+  }
+
+}

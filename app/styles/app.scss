@@ -14,6 +14,7 @@ $c-pink: #e577aa;
 $c-blue: #72bbe9;
 $c-green: #7abe93;
 $c-yellow: #e5b178;
+$c-white: #fff;
 
 .section {
   padding: 2rem;
@@ -37,13 +38,17 @@ $c-yellow: #e5b178;
 }
 
 .shop-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__title {
     color: $c-primary;
   }
 
   &__description {
-    color: $c-primary;
     padding: 0 1rem;
+    color: $c-primary;
   }
 
   &__pic {
@@ -55,19 +60,15 @@ $c-yellow: #e5b178;
   }
 
   &__options {
-
-
+    align-self: stretch;
   }
 
 }
-
-
 
 .button-bar {
   display: flex;
   min-height: 2rem;
   border-top: 0.25rem $c-primary solid;
-
 
   &__button {
     flex-grow: 1;
@@ -76,7 +77,8 @@ $c-yellow: #e5b178;
     color: $c-primary;
 
     &:hover {
-      background-color: $c-jamaica1;
+      background-color: $c-primary;
+      color: $c-white;
     }
   }
 
@@ -85,8 +87,68 @@ $c-yellow: #e5b178;
   }
 }
 
+.dropdown {
+  position: relative;
 
+  &__list {
+    display: flex;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    flex-direction: column;
+    margin: 0;
+    transform: translate(-50%, 0);
+    border: 0.25rem solid $c-primary;
+    background: $c-white;
+    display: none;
+    color: $c-primary;
 
-.dropdown__list {
-  display: none;
+    > * + * {
+      border-top: 0.25rem solid $c-primary;
+    }
+  }
 }
+
+.dropdown__button {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.dropdown__button--pink {
+  color: $c-pink;
+
+  :hover {
+    font-size: 1.5rem;
+  }
+}
+
+.dropdown__button--green {
+  color: $c-green;
+
+  :hover {
+    font-size: 1.5rem;
+  }
+}
+
+.dropdown__button--blue {
+  :hover {
+    font-size: 1.5rem;
+  }
+  color: $c-blue;
+}
+
+.dropdown__button--yellow {
+  :hover {
+    font-size: 1.5rem;
+  }
+  color: $c-yellow;
+}
+
+.dropdown:hover .dropdown__list {
+  display: flex;
+}
+
+.size:hover {
+  font-size: 1.5rem;
+}
+@import 'media';
