@@ -52,14 +52,24 @@ $c-jamaica3: #4a048e;
   }
 
   &__options {
-  border-top: 0.25rem $c-blue solid;
+    border-top: 0.25rem $c-blue solid;
 
   }
 
 }
 
-.button-bar__button {
-  transition: background-color 0.5s ease;
+.button-bar {
+  display: flex;
+  min-height: 2rem;
+
+  > * + * {
+    border-left: 0.25rem $c-blue solid;
+  }
+
+  .button-bar__button {
+    flex-grow: 1;
+    transition: background-color 0.5s ease;
+  }
 
   &:hover {
     background-color: $c-jamaica1;
