@@ -28,14 +28,14 @@ $c-white: #fff;
 .grid {
   display: flex;
   flex-wrap: wrap;
-}
 
-.grid__item {
-  flex-basis: calc(100% / 3 - 2rem);
-  flex-grow: 1;
-  margin: 1rem;
-  border: 0.25rem $c-primary solid;
-}
+  &__item {
+    flex-basis: calc(100% / 3 - 2rem);
+    flex-grow: 1;
+    margin: 1rem;
+    border: 0.25rem $c-primary solid;
+   }
+  }
 
 .shop-card {
   display: flex;
