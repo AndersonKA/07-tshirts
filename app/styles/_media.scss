@@ -1,4 +1,6 @@
 @media(min-width: 500px) and (max-width: 770px) {
+
+
   .grid {
     flex-direction: column;
 
@@ -11,6 +13,11 @@
     &__pic {
       width: 25%;
     }
+
+    &__options {
+      align-items: flex-end;
+    }
+
   }
 
   .button-bar {
@@ -20,20 +27,32 @@
     border-left: 0.25rem solid $c-primary;
 
     > * + * {
-      border-left: 0;
+      border: 0;
+      border-top: 0.25rem solid $c-primary;
     }
   }
+
+
+
 
   .dropdown {
-    .dropdown__list {
-      right: 100%;
-      flex-direction: row-reverse;
+
+    &__list {
+      flex-direction: row;
       padding: 0;
       border: 0;
-    }
+      left: -350%;
+      bottom: 0;
+      transform: translate(-50%, 0);
 
-    > * + * {
-      border: 0;
+
+      > * + * {
+        border-top: none;
+      }
     }
   }
+
+
+
+
 }
