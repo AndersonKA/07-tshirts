@@ -112,35 +112,28 @@ $c-white: #fff;
 .dropdown__button {
   padding: 1rem;
   font-size: 1rem;
+
+  &:hover * {
+    display: block;
+    transform: scale(1.2);
+  }
 }
 
 .dropdown__button--pink {
   color: $c-pink;
 
-  :hover {
-    font-size: 1.5rem;
-  }
 }
 
 .dropdown__button--green {
   color: $c-green;
 
-  :hover {
-    font-size: 1.5rem;
-  }
 }
 
 .dropdown__button--blue {
-  :hover {
-    font-size: 1.5rem;
-  }
   color: $c-blue;
 }
 
 .dropdown__button--yellow {
-  :hover {
-    font-size: 1.5rem;
-  }
   color: $c-yellow;
 }
 
@@ -148,7 +141,4 @@ $c-white: #fff;
   display: flex;
 }
 
-.size:hover {
-  font-size: 1.5rem;
-}
 @import 'media';

@@ -8,6 +8,7 @@
   .shop-card {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
     &__pic {
       width: 25%;
@@ -29,20 +30,19 @@
       border: 0;
       border-top: 0.25rem solid $c-primary;
     }
+
   }
-
-
-
 
   .dropdown {
 
     &__list {
       bottom: 50%;
-      left: -100%;
+      left: auto;
+      right: 100%;
       flex-direction: row;
-      padding: 0;
+
       transform: translate(0, 50%);
-      border: 0;
+
       border: 0.25rem solid $c-primary;
 
 
@@ -52,8 +52,4 @@
       }
     }
   }
-
-
-
-
 }
