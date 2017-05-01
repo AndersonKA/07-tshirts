@@ -1,6 +1,144 @@
 // @import 'yoga';
 // @import 'normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+@import 'font-awesome';
 @import 'box-sizing';
+@import 'resets';
+
+$c-primary: #3473b5;
+$c-jamaica1: #54b0d2;
+$c-jamaica2: #17b63e;
+$c-jamaica3: #4a048e;
+$c-pink: #e577aa;
+$c-blue: #72bbe9;
+$c-green: #7abe93;
+$c-yellow: #e5b178;
+$c-white: #fff;
+
+.section {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: calc(100% / 3 - 2rem);
+    flex-grow: 1;
+    margin: 1rem;
+    border: 0.25rem $c-primary solid;
+   }
+  }
+
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    color: $c-primary;
+  }
+
+  &__description {
+    padding: 0 1rem;
+    color: $c-primary;
+  }
+
+  &__pic {
+    padding: 1rem;
+  }
+
+  &__info {
+    text-align: center;
+  }
+
+  &__options {
+    align-self: stretch;
+  }
+
+}
+
+.button-bar {
+  display: flex;
+  min-height: 2rem;
+  border-top: 0.25rem $c-primary solid;
+
+  &__button {
+    flex-grow: 1;
+    border: 0;
+    background: none;
+    color: $c-primary;
+
+    &:hover {
+      background-color: $c-primary;
+      color: $c-white;
+    }
+  }
+
+  > * + * {
+    border-left: 0.25rem solid $c-primary;
+  }
+}
+
+.dropdown {
+  position: relative;
+
+  &__list {
+    display: flex;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    flex-direction: column;
+    margin: 0;
+    transform: translate(-50%, 0);
+    border: 0.25rem solid $c-primary;
+    background: $c-white;
+    display: none;
+    color: $c-primary;
+
+    > * + * {
+      border-top: 0.25rem solid $c-primary;
+    }
+  }
+}
+
+.dropdown__button {
+  padding: 1rem;
+  font-size: 1rem;
+
+  &:hover * {
+    display: block;
+    transform: scale(1.2);
+  }
+}
+
+.dropdown__button--pink {
+  color: $c-pink;
+
+}
+
+.dropdown__button--green {
+  color: $c-green;
+
+}
+
+.dropdown__button--blue {
+  color: $c-blue;
+}
+
+.dropdown__button--yellow {
+  color: $c-yellow;
+}
+
+.dropdown:hover .dropdown__list {
+  display: flex;
+}
+
+@import 'media';
